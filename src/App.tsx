@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { AiOutlineClose } from 'react-icons/ai' // Импортируем иконку закрытия
 import { BsMoonFill } from 'react-icons/bs'
 import { FaFire } from 'react-icons/fa6'
 import { IoPerson } from 'react-icons/io5'
@@ -36,7 +37,7 @@ const App = () => {
 	}
 
 	return (
-		<div className='app'>
+		<div className={`app ${isDarkMode ? 'dark' : 'light'}`}>
 			<header className='header'>
 				<div className='container header-content'>
 					<div className='header-left'>
@@ -49,7 +50,11 @@ const App = () => {
 						aria-expanded={isMenuOpen}
 						onClick={toggleMenu}
 					>
-						<span className='menu-icon'></span>
+						{isMenuOpen ? (
+							<AiOutlineClose />
+						) : (
+							<span className='menu-icon'></span>
+						)}
 					</button>
 					<nav className={`nav ${isMenuOpen ? 'show' : ''}`} id='nav-menu'>
 						<ul className='nav-list'>

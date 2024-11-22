@@ -526,4 +526,202 @@ body.dark-theme .theme-button:hover {
   .settings {
     justify-content: center;
   }
+}
+/* Основные стили */
+body {
+  transition: background-color 0.5s ease, color 0.5s ease;
+  font-family: "Roboto", sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.menu-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  display: none;
+}
+
+.menu-icon {
+  width: 25px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+}
+
+.menu-icon::before,
+.menu-icon::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 2px;
+  background: #fff;
+}
+
+.menu-icon::before {
+  top: -8px;
+}
+
+.menu-icon::after {
+  bottom: -8px;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.nav-list {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.settings {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.theme-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.theme-button:hover {
+  background-color: #0056b3;
+}
+
+.language-switch {
+  display: flex;
+  align-items: center;
+}
+
+.language-label {
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.language-select {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.counter {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.counter p {
+  font-size: 1rem;
+  color: inherit;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+
+.counter p span {
+  margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+  .menu-icon {
+    width: 15px;
+    height: 2px;
+    position: relative;
+    background-color: #bb86fc;
+    left: -10px;
+    border-radius: 5px;
+  }
+  .menu-icon::before,
+  .menu-icon::after {
+    content: "";
+    position: absolute;
+    width: 23px;
+    height: 2px;
+    border-radius: 5px;
+    background-color: #bb86fc;
+  }
+  .menu-icon::before {
+    top: -8px; /* Поправляем отступ сверху */
+  }
+  .menu-icon::after {
+    bottom: -8px; /* Поправляем отступ снизу */
+  }
+  .menu-button {
+    background: none;
+    border: none;
+    color: #0d0d0d;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+  }
+  .header-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    width: 100%;
+  }
+  .nav.show {
+    display: flex;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .settings {
+    justify-content: center;
+  }
 }/*# sourceMappingURL=index.css.map */
