@@ -1,0 +1,42 @@
+/* language-switcher.scss */
+
+/* Основные стили для language-switch */
+.language-switch {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+
+	.language-label {
+		font-size: 1rem;
+		margin-right: 10px;
+		color: inherit; /* Унаследовать цвет от родителя */
+	}
+
+	.language-select {
+		padding: 5px;
+		border: 1px solid #ccc;
+		border-radius: 5px;
+		font-size: 1rem;
+		background-color: #fff;
+		color: #333;
+		transition: border-color 0.3s ease;
+
+		&:focus {
+			outline: none;
+			border-color: #007bff;
+		}
+	}
+
+	/* Темная тема */
+	body.dark-theme & {
+		.language-select {
+			background-color: #2e2e2e;
+			color: #fff;
+			border: 1px solid #444;
+
+			&:focus {
+				border-color: #bb86fc;
+			}
+		}
+	}
+}
